@@ -516,7 +516,7 @@ impl<'a, P: Pixel> TextLayout<'a, P> {
         });
         self
     }
-  
+
     fn truncate_text_with_ellipsis(&self, segment: &TextSegment<'a, P>) -> String {
         if segment.max_height.is_none() {
             return segment.text.clone();
@@ -572,7 +572,6 @@ impl<'a, P: Pixel> TextLayout<'a, P> {
             format!("{trimmed_text}{ellipsis}")
         }
     }
-
 
     /// Adds a text segment to the text layout.
     pub fn push_segment(&mut self, segment: &TextSegment<'a, P>) {
